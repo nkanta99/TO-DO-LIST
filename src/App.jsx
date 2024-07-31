@@ -46,6 +46,22 @@ const App = () => {
         <button onClick={handleAddToList}>Add to List</button>
       </div>
 
+      <div className="listWrapper">
+        <ul className="toDoList">
+          {remainingTasks.map((todo) => (
+            <li key={todo.id} className={`toDoItem ${todo.done ? "done" : ""}`}>
+              <div className="stickyNote">
+                <span className={todo.done ? "doneText" : ""}>{todo.text}</span>
+                <div>
+                  <button className="doneButton" onClick={() => handleToggleDone(todo.id)}>{todo.done ? "Undo" : "Done"}</button>
+                  <button className="removeButton" onClick={() => handleDeleteToDo(todo.id)}>Delete</button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       
     </div>
   )
