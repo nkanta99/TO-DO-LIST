@@ -62,8 +62,24 @@ const App = () => {
         </ul>
       </div>
 
-      
+      <h2>Completed Tasks:</h2>
+      <div className="completedTasks">
+        <ul className="completedList">
+          {completeTasks.map((todo) => (
+            <li key={todo.id} className={`completedItem`}>
+              <div className="stickyNote">
+                <span className="doneText">{todo.text}</span>
+              <div>
+              <button className="doneButton" onClick={() => handleToggleDone(todo.id)}>Undo</button>
+              <button className="removeButton" onClick={() => handleDeleteToDo(todo.id)}>Delete</button>
+              </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
+  );
+};
 
-}
+export default App;
