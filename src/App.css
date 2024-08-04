@@ -66,5 +66,75 @@ h2 {
 }
 
 .stickyNote {
-    
+    background-color: #ffd700;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 14px 8px rgba(0, 0, 0, 0.404);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.removeButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.removeButton:hover {
+    color: black;
+}
+
+.toDoInput {
+    margin-bottom: 20px;
+}
+
+.toDoInput input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.toDoInput button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #5b5c5b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.toDoInput button:hover {
+    background-color: #b32700;
+}
+
+.doneButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.doneButton:hover {
+    background-color: greenyellow;
 }
